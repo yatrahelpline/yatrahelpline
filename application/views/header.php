@@ -4,9 +4,9 @@
 	<head>
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 		<title>Yatrahelpline :Admin Panel</title>
-		<link rel="stylesheet" href="http://localhost/Ajith/yathrahelpline/css/960.css" type="text/css" media="screen" charset="utf-8" />
-		<!--<link rel="stylesheet" href="css/fluid.css" type="text/css" media="screen" charset="utf-8" />-->
-		<link rel="stylesheet" href="http://localhost/Ajith/yathrahelpline/css/template.css" type="text/css" media="screen" charset="utf-8" />
-		<link rel="stylesheet" href="http://localhost/Ajith/yathrahelpline/css/colour.css" type="text/css" media="screen" charset="utf-8" />
+		<link rel="stylesheet" href="<?php echo base_url('css/960.css'); ?>" type="text/css" media="screen" charset="utf-8" />
+		
+		<link rel="stylesheet" href="<?php echo base_url('css/template.css'); ?>" type="text/css" media="screen" charset="utf-8" />
+		<link rel="stylesheet" href="<?php echo base_url('css/colour.css'); ?>" type="text/css" media="screen" charset="utf-8" />
 	</head>
 	<body>
