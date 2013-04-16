@@ -26,6 +26,36 @@ class Spot extends CI_Controller {
 		
 		
 	}
+
+
+        public function add()
+	{
+
+
+                       $add['table']='spot';
+			$add['data']['title']           = $this->input->post('title');
+
+			$add['data']['keyword']           = $this->input->post('keyword');
+			$add['data']['descr']           = $this->input->post('descr');
+			$add['data']['data']           = $this->input->post('data');
+			$add['data']['relationid']        = $this->input->post('relationid');
+			$add['data']['primary']           = $this->input->post('primary');
+
+insert($add);
+
+
+
+
+
+
+              $this->load->view('header.php');
+              $this->load->view('top.php');
+	      $this->load->view('spot/content.php');
+              $this->load->view('footer.php');
+
+
+
+        }
 	
 	
 	
