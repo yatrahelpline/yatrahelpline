@@ -1,11 +1,6 @@
-<h1 id="head">Yatrahelpline</h1>
-	<ul id="navigation">
-			<li><span class="active">Overview</span></li>
-			<li><a href="#">News</a></li>
-			<li><a href="#">Users</a></li>
-		</ul>
+
         
-<form action="spot" method="post" >        
+<form action="http://localhost/yatrahelpline/trunk/index.php/spot/add" method="post" >
         
 			<div id="content" class="container_16 clearfix">
 				<div class="grid_16">
