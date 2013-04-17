@@ -32,7 +32,19 @@ class Spot extends CI_Controller {
 	{
 
 
-                       $add['table']='spot';
+
+
+                        $this->load->helper(array('form', 'url'));
+		        $this->load->library('form_validation');
+
+                        $this->form_validation->set_rules('title', 'Title', 'required');
+                        $this->form_validation->set_rules('keyword', 'Keyword', 'required');
+                        $this->form_validation->set_rules('descr', 'Description', 'required');
+                        $this->form_validation->set_rules('data', 'Data', 'required');
+                        $this->form_validation->set_rules('relationid', 'Relation Id', 'required');
+                        $this->form_validation->set_rules('primary', 'Primary', 'required');
+
+                        $add['table']='spot';
 			$add['data']['title']           = $this->input->post('title');
 
 			$add['data']['keyword']           = $this->input->post('keyword');
@@ -41,7 +53,14 @@ class Spot extends CI_Controller {
 			$add['data']['relationid']        = $this->input->post('relationid');
 			$add['data']['primary']           = $this->input->post('primary');
 
-insert($add);
+                           if ($this->form_validation->run() == FALSE)
+                            {
+                                    //$this->load->view('spot/content.php');
+                            }
+                            else
+                            {
+                                     insert($add);
+                            }
 
 
 
