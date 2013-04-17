@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Spot extends CI_Controller {
+class Hotel extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -21,7 +21,7 @@ class Spot extends CI_Controller {
 	{
 		$this->load->view('header.php');
                 $this->load->view('top.php');
-		$this->load->view('spot/content.php');
+		$this->load->view('hotel/content.php');
 		$this->load->view('footer.php');
 		
 		
@@ -29,7 +29,7 @@ class Spot extends CI_Controller {
 	}
 
 
-        public function add()
+       public function add()
 	{
 
 
@@ -43,16 +43,23 @@ class Spot extends CI_Controller {
                         $this->form_validation->set_rules('descr', 'Description', 'required');
                         $this->form_validation->set_rules('data', 'Data', 'required');
                         $this->form_validation->set_rules('relationid', 'Relation Id', 'required');
-                        $this->form_validation->set_rules('primary', 'Primary', 'required');
+                        $this->form_validation->set_rules('roomrate', 'Room Rate', 'required');
+                        $this->form_validation->set_rules('contactinfo', 'Contact Info', 'required');
+                        $this->form_validation->set_rules('faclitiies', 'Faclitiies', 'required');
+                        $this->form_validation->set_rules('peakseason', 'Peak Season', 'required');
 
-                        $add['table']='spot';
-			$add['data']['title']           = $this->input->post('title');
 
-			$add['data']['keyword']           = $this->input->post('keyword');
-			$add['data']['descr']           = $this->input->post('descr');
-			$add['data']['data']           = $this->input->post('data');
-			$add['data']['relationid']        = $this->input->post('relationid');
-			$add['data']['primary']           = $this->input->post('primary');
+						$add['table']='hotel';
+						$add['data']['title']           = $this->input->post('title');
+						$add['data']['keyword']         = $this->input->post('keyword');
+						$add['data']['descr']           = $this->input->post('descr');
+						$add['data']['data']            = $this->input->post('data');
+						$add['data']['relationalid']      = $this->input->post('relationid');
+						
+						$add['data']['roomrate']        = $this->input->post('roomrate');
+						$add['data']['contactinfo']     = $this->input->post('contactinfo');
+						$add['data']['facilities']      = $this->input->post('faclitiies');
+						$add['data']['peakseason']      = $this->input->post('peakseason');
 
                            if ($this->form_validation->run() == FALSE)
                             {
@@ -68,9 +75,11 @@ class Spot extends CI_Controller {
 
 
 
+
+
               $this->load->view('header.php');
               $this->load->view('top.php');
-	      $this->load->view('spot/content.php');
+	      $this->load->view('hotel/content.php');
               $this->load->view('footer.php');
 
 
