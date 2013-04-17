@@ -1,6 +1,6 @@
 
 
-<form action="http://localhost/yatrahelpline/trunk/index.php/spot/add" method="post" >
+<form action="http://localhost/yatrahelpline/trunk/index.php/homestay/add" method="post" >
 
 			<div id="content" class="container_16 clearfix">
 				<div class="grid_16">
@@ -73,8 +73,29 @@
 
                 <div class="grid_6">
 					<p>
-						<label for="title">Primary Spot</label>
-						<select name="primary">
+						<label for="title">Room Rate</label>
+						<input type="text" name="roomrate" />
+					</p>
+		</div>
+
+                <div class="grid_7" style="clear: both">
+					<p>
+						<label for="title">Contact Info</label>
+						<textarea name="data"></textarea>
+					</p>
+		</div>
+
+               <div class="grid_7" style="clear: both">
+					<p>
+						<label for="title">Faclitiies</label>
+						<textarea name="faclitiies"></textarea>
+					</p>
+		</div>
+
+                            <div class="grid_6" style="clear: both">
+					<p>
+						<label for="title">Peak Season</label>
+						<select name="peakseason">
                         <option value="">Select </option>
                         <option value="yes">Yes </option>
                         <option value="no">No </option>
@@ -82,6 +103,7 @@
                         </select>
 					</p>
 				</div>
+
 
 
 
