@@ -6,6 +6,10 @@
 				<div class="grid_16">
 					<h2>Submit New Spot</h2>
 					<!--<p class="error">Something went wronk.</p>-->
+
+                                         <span style="color:red">
+                                        <?php echo validation_errors(); ?>
+                                        </span>
 				</div>
 
 				<div class="grid_5">
