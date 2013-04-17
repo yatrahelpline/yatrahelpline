@@ -20,6 +20,7 @@ class Spot extends CI_Controller {
 	public function index()
 	{
 		$this->load->view('header.php');
+                $this->load->view('top.php');
 		$this->load->view('spot/content.php');
 		$this->load->view('footer.php');
 		
