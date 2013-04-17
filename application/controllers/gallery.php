@@ -20,6 +20,7 @@ class Gallery extends CI_Controller {
 	public function index()
 	{
 		$this->load->view('header.php');
+                $this->load->view('top.php');
 		$this->load->view('gallery/content.php');
 		$this->load->view('footer.php');
 		
