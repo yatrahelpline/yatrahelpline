@@ -1,16 +1,14 @@
-<h1 id="head">Yatrahelpline</h1>
-	<ul id="navigation">
-			<li><span class="active">Overview</span></li>
-			<li><a href="#">News</a></li>
-			<li><a href="#">Users</a></li>
-		</ul>
+
         
-<form action="gallery" method="post" >        
+<form action="http://localhost/yatrahelpline/trunk/index.php/gallery/add" method="post" >
         
 			<div id="content" class="container_16 clearfix">
 				<div class="grid_16">
 					<h2>Submit New Gallery</h2>
 					<!--<p class="error">Something went wronk.</p>-->
+                                         <span style="color:red">
+                                        <?php echo validation_errors(); ?>
+                                        </span>
 				</div>
 
 				<div class="grid_5">
