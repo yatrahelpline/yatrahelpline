@@ -23,10 +23,57 @@ class Gallery extends CI_Controller {
                 $this->load->view('top.php');
 		$this->load->view('gallery/content.php');
 		$this->load->view('footer.php');
-		
-		
+
+
 		
 	}
+
+
+         public function add()
+	{
+
+
+
+
+                        $this->load->helper(array('form', 'url'));
+		        $this->load->library('form_validation');
+
+                        $this->form_validation->set_rules('title', 'Title', 'required');
+                        $this->form_validation->set_rules('keyword', 'Keyword', 'required');
+                        $this->form_validation->set_rules('descr', 'Description', 'required');
+                        $this->form_validation->set_rules('name', 'Name', 'required');
+                        
+
+
+                        $add['table']='gallery';
+			$add['data']['title']           = $this->input->post('title');
+			$add['data']['keyword']           = $this->input->post('keyword');
+			$add['data']['descr']           = $this->input->post('descr');
+			$add['data']['name']           = $this->input->post('name');
+			
+
+                           if ($this->form_validation->run() == FALSE)
+                            {
+                                    //$this->load->view('spot/content.php');
+                            }
+                            else
+                            {
+                                     insert($add);
+                            }
+
+
+
+
+
+
+              $this->load->view('header.php');
+              $this->load->view('top.php');
+	      $this->load->view('gallery/content.php');
+              $this->load->view('footer.php');
+
+
+
+        }
 	
 	
 	
