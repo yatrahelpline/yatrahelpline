@@ -29,6 +29,55 @@ class Homestay extends CI_Controller {
 	}
 
 
+        public function add()
+	{
+
+
+
+
+                        $this->load->helper(array('form', 'url'));
+		        $this->load->library('form_validation');
+
+                        $this->form_validation->set_rules('title', 'Title', 'required');
+                        $this->form_validation->set_rules('keyword', 'Keyword', 'required');
+                        $this->form_validation->set_rules('descr', 'Description', 'required');
+                        $this->form_validation->set_rules('data', 'Data', 'required');
+                        $this->form_validation->set_rules('relationid', 'Relation Id', 'required');
+                        $this->form_validation->set_rules('primary', 'Primary', 'required');
+
+                        $add['table']='spot';
+			$add['data']['title']           = $this->input->post('title');
+
+			$add['data']['keyword']           = $this->input->post('keyword');
+			$add['data']['descr']           = $this->input->post('descr');
+			$add['data']['data']           = $this->input->post('data');
+			$add['data']['relationid']        = $this->input->post('relationid');
+			$add['data']['primary']           = $this->input->post('primary');
+
+                           if ($this->form_validation->run() == FALSE)
+                            {
+                                    //$this->load->view('spot/content.php');
+                            }
+                            else
+                            {
+                                     insert($add);
+                            }
+
+
+
+
+
+
+              $this->load->view('header.php');
+              $this->load->view('top.php');
+	      $this->load->view('spot/content.php');
+              $this->load->view('footer.php');
+
+
+
+        }
+
+
       
 	
 	
