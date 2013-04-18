@@ -38,7 +38,6 @@ class Homestay extends CI_Controller {
                         $this->form_validation->set_rules('descr', 'Description', 'required');
                         $this->form_validation->set_rules('data', 'Data', 'required');
                         $this->form_validation->set_rules('relationid', 'Relation Id', 'required');
-                        $this->form_validation->set_rules('primary', 'Primary', 'required');
                         $this->form_validation->set_rules('roomrate', 'Room Rate', 'required');
                         $this->form_validation->set_rules('contactinfo', 'Contact Info', 'required');
                         $this->form_validation->set_rules('faclitiies', 'Faclitiies', 'required');
@@ -51,7 +50,6 @@ class Homestay extends CI_Controller {
 			$add['data']['descr']           = $this->input->post('descr');
 			$add['data']['data']           = $this->input->post('data');
 			$add['data']['relationid']        = $this->input->post('relationid');
-			$add['data']['primary']           = $this->input->post('primary');
                         $add['data']['roomrate']           = $this->input->post('roomrate');
 			$add['data']['contactinfo']        = $this->input->post('contactinfo');
 			$add['data']['faclitiies']           = $this->input->post('faclitiies');
@@ -82,7 +80,7 @@ class Homestay extends CI_Controller {
                            {
                            $data['msg']='You have submitted successfully';
                            }
-                               
+                                insert($add);
                             }
 
 
@@ -92,7 +90,7 @@ class Homestay extends CI_Controller {
 
               $this->load->view('header.php');
               $this->load->view('top.php');
-	      $this->load->view('spot/content.php',$data);
+	      $this->load->view('homestay/content.php',$data);
               $this->load->view('footer.php');
 
 
