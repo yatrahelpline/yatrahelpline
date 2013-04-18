@@ -84,7 +84,7 @@
                 <div class="grid_7" style="clear: both">
 					<p>
 						<label for="title">Contact Info</label>
-						<textarea name="data"></textarea>
+						<textarea name="contactinfo"></textarea>
 					</p>
 		</div>
 
