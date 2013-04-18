@@ -1,14 +1,17 @@
 
 
-<form action="http://localhost/yatrahelpline/trunk/index.php/homestay/add" method="post" >
+
+
+    <?php echo form_open_multipart('homestay/add');?>
 
 			<div id="content" class="container_16 clearfix">
 				<div class="grid_16">
-					<h2>Submit New Spot</h2>
+					<h2>Submit New Homestay</h2>
 					<!--<p class="error">Something went wronk.</p>-->
 
                                          <span style="color:red">
-                                        <?php echo validation_errors(); ?>
+                                        <?php echo validation_errors(); ?><br/>
+                                         <?php echo $msg;?>
                                         </span>
 				</div>
 
