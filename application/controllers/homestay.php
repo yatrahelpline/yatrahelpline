@@ -19,12 +19,7 @@ class Homestay extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('header.php');
-                $this->load->view('top.php');
-		$this->load->view('homestay/content.php');
-		$this->load->view('footer.php');
-		
-		
+            $this->add();
 		
 	}
 
@@ -62,13 +57,32 @@ class Homestay extends CI_Controller {
 			$add['data']['faclitiies']           = $this->input->post('faclitiies');
                         $add['data']['peakseason']           = $this->input->post('peakseason');
 
-                           if ($this->form_validation->run() == FALSE)
+                           $data['error']='sss';
+                              $data['msg']='';
+
+                        if ($this->form_validation->run() == FALSE)
                             {
                                     //$this->load->view('spot/content.php');
                             }
                             else
                             {
-                                     insert($add);
+
+                              $data['error']= $this->do_upload('imageid1');
+                              $data1['error']= $this->do_upload('imageid2');
+                              $data2['error']= $this->do_upload('imageid3');
+
+
+
+                           $add['data']['imageid1']   = $data['error']['upload_data']['file_name'];
+                           $add['data']['imageid2']   = $data1['error']['upload_data']['file_name'];
+                           $add['data']['imageid3']   = $data2['error']['upload_data']['file_name'];
+                           $ins=insert($add);
+                           $data['msg']='';
+                           if($ins)
+                           {
+                           $data['msg']='You have submitted successfully';
+                           }
+                               
                             }
 
 
@@ -78,14 +92,37 @@ class Homestay extends CI_Controller {
 
               $this->load->view('header.php');
               $this->load->view('top.php');
-	      $this->load->view('homestay/content.php');
+	      $this->load->view('spot/content.php',$data);
               $this->load->view('footer.php');
 
 
 
         }
 
+function do_upload($field="")
+	{
+		$config['upload_path'] = 'uploads/';
+		$config['allowed_types'] = 'gif|jpg|png';
 
+		$this->load->library('upload', $config);
+
+		if ( ! $this->upload->do_upload($field))
+		{
+			$error = array('error' => $this->upload->display_errors());
+
+			return $error;
+
+                        //echo $error;
+		}
+		else
+		{
+			$data = array('upload_data' => $this->upload->data());
+
+			return $data;
+
+                       // echo $data;
+		}
+	}
       
 	
 	
