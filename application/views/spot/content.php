@@ -11,30 +11,28 @@
                                          <span style="color:red">
                                         <?php echo validation_errors(); ?><br/>
 
-                                        <?php
-                                        
-                                        echo $msg;?>
+                                        <?php echo $msg;?>
                                         </span>
 				</div>
 
 				<div class="grid_5">
 					<p>
 						<label for="title">Title <small></small></label>
-						<input type="text" name="title" />
+						<input type="text" name="title" id="title" value="<?php print set_value('title'); ?>" />
 					</p>
 				</div>
 
 				<div class="grid_5">
 					<p>
 						<label for="title">Keyword <small></small></label>
-						<input type="text" name="keyword" />
+						<input type="text" name="keyword" id="keyword" value="<?php print set_value('keyword'); ?>" />
 					</p>
 						
 				</div>
 				<div class="grid_6">
 					<p>
 						<label for="title">Description</label>
-						<input type="text" name="descr" />
+						<input type="text" name="descr" id="descr" value="<?php print set_value('descr'); ?>" />
 					</p>
 				</div>
              
@@ -48,7 +46,7 @@
                    <div class="grid_6">
 					<p>
 						<label for="title">Relation</label>
-						<input type="text" name="relationid" />
+						<input type="text" name="relationid" id="relationid" value="<?php print set_value('relationid'); ?>"/>
 					</p>
 				</div>
                 
@@ -79,7 +77,7 @@
                 <div class="grid_6">
 					<p>
 						<label for="title">Primary Spot</label>
-						<select name="primary">
+						<select name="primary" id="primary" value="<?php print set_value('primary'); ?>">
                         <option value="">Select </option>
                         <option value="yes">Yes </option>
                         <option value="no">No </option>
