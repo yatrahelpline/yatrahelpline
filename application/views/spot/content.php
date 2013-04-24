@@ -5,7 +5,7 @@
 
 			<div id="content" class="container_16 clearfix">
 				<div class="grid_16">
-					<h2>Submit New Spot</h2>
+					<h2>Submit New Spot <?php //pa($query); //echo $query->title; ?></h2>
 					<!--<p class="error">Something went wronk.</p>-->
 
                                          <span style="color:red">
@@ -18,7 +18,7 @@
 				<div class="grid_5">
 					<p>
 						<label for="title">Title <small></small></label>
-						<input type="text" name="title" id="title" value="<?php print set_value('title'); ?>" />
+			<input type="text" name="title" id="title" value="<?php print set_value('title'); //echo $query->title; ?>" />
 					</p>
 				</div>
 
