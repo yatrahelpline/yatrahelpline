@@ -111,7 +111,7 @@ class Displayspot extends CI_Controller {
 
               $this->load->view('header.php');
               $this->load->view('top.php');
-	      $this->load->view('spot/content.php',$data);
+	      $this->load->view('spot/contentedit.php',$data);
               $this->load->view('footer.php');
 
 
