@@ -8,6 +8,22 @@ function spot_getall(){
 	    $query = $this->db->get('spot');
 	    return $query->result();
 	    }
+
+
+
+            function spot_getedit($id){
+
+            $query = $this->db->query("select * from spot where spotid =$id");
+
+             $row = $query->row();
+
+  return $row;
+
+
+
+
+	    }
+            
 }
 
 ?>
