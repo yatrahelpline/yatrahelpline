@@ -38,7 +38,7 @@
             <td><?php  echo $row->relationid;  ?></td>
             <td><?php  echo $row->primary;  ?></td>
             <td>
-                <a href="<?php echo base_url('index.php/spot/add');  ?>" style="text-decoration: none;color: red">Edit</a>
+                <a href="<?php echo base_url('index.php/displayspot/edit/');  ?>/<?php echo $row->spotid; ?>" style="text-decoration: none;color: red">Edit</a>
                 
             </td>
     </tr>
