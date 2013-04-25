@@ -1,7 +1,7 @@
 <div id="content" class="container_16 clearfix">
 				<div class="grid_5">
 					<div class="box">
-						<h2>Mathew</h2>
+						<h2>Mathew <?php //echo $data['username']; ?></h2>
 						<div class="utils">
 							<a href="#">View More</a>
 						</div>
@@ -99,7 +99,7 @@
 					<div class="box">
 						<h2>Statistics</h2>
 						<div class="utils">
-							<a href="#">View More</a>
+							<a href="<?php echo base_url('index.php/logout');  ?>">Logout</a>
 						</div>
 						<table>
 							<tbody>

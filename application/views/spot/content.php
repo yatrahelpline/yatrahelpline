@@ -1,7 +1,7 @@
 
         
 
-    <?php echo form_open_multipart('spot/add');?>
+ <form action="http://localhost/yatrahelpline/trunk/index.php/spot/add/" method="post" enctype="multipart/form-data">
 
 			<div id="content" class="container_16 clearfix">
 				<div class="grid_16">
@@ -56,7 +56,7 @@
                 <div class="grid_5" style="clear:both">
 					<p>
 						<label for="title">Image1 <small></small></label>
-						<input type="file" name="imageid1" />
+						<input type="file" name="imageid1" id="imageid1" />
 					</p>
 				</div>
 
