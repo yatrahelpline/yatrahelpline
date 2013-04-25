@@ -70,17 +70,18 @@ class Spot extends CI_Controller {
                             }
                             else
                             {
-                                   //  insert($add);
+                              
 
                               $data['error']= $this->do_upload('imageid1');
                               $data1['error']= $this->do_upload('imageid2');
                               $data2['error']= $this->do_upload('imageid3');
                             
-                        
+                       
 
                            $add['data']['imageid1']   = $data['error']['upload_data']['file_name'];
-                           $add['data']['imageid2']   = $data1['error']['upload_data']['file_name'];
-                           $add['data']['imageid3']   = $data2['error']['upload_data']['file_name'];
+                       
+                            $add['data']['imageid2']   = $data1['error']['upload_data']['file_name'];
+                            $add['data']['imageid3']   = $data2['error']['upload_data']['file_name'];
                            $ins=insert($add);
                            $data['msg']='';
                            if($ins)
@@ -117,7 +118,7 @@ class Spot extends CI_Controller {
 		{
 			$error = array('error' => $this->upload->display_errors());
 
-			return $error;
+			//return $error;
 
                         //echo $error;
 		}
@@ -127,7 +128,7 @@ class Spot extends CI_Controller {
 
 			return $data;
 
-                       // echo $data;
+                      
 		}
 	}
 
