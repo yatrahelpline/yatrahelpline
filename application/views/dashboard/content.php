@@ -3,7 +3,7 @@
 					<div class="box">
 						<h2>Mathew <?php //echo $data['username']; ?></h2>
 						<div class="utils">
-							<a href="#">View More</a>
+							<a href="#">View More <?php echo $session_id = $this->session->userdata('session_id');  ?></a>
 						</div>
 						<p><strong>Last Signed In : </strong> Wed 11 Nov, 7:31<br /><strong>IP Address : </strong> 192.168.1.101</p>
 					</div>
